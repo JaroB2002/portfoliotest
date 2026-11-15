@@ -1,6 +1,8 @@
 # Jaro Brichau — portfolio rebuild
 
-Experimental rebuild of [jarobrichau.be](https://jarobrichau.be/) — Awwwards-inspired, type-led, work-first.
+Experimental rebuild of [jarobrichau.be](https://jarobrichau.be/).
+
+**Positioning:** all-round digital creative · Digital Marketing Consultant at [DIDIOM](https://didiom.be/).
 
 ## Run
 
