@@ -6,41 +6,70 @@ export type Project = {
   disciplines: string[];
   blurb: string;
   image: string;
-  caseUrl: string;
+  role: string;
+  brief: string;
+  insight: string;
+  idea: string;
+  impact: string;
 };
 
 export const projects: Project[] = [
   {
     slug: "masked-giant",
     title: "The Masked Giant",
-    client: "Personal concept",
+    client: "Personal concept · Quick",
     year: "2025",
-    disciplines: ["Concept", "Campaign", "Story"],
+    disciplines: ["Concept", "Campaign", "TV culture"],
     blurb:
-      "A giant burger costume hides a Belgian icon — mystery and national pride as cult-status fuel.",
+      "A giant burger costume hides a Belgian icon on The Masked Singer — mystery and national pride as cult-status fuel.",
     image: "/work/masked-giant.webp",
-    caseUrl: "https://jarobrichau.be/work/themaskedgiant.html",
+    role: "Concept & creative direction",
+    brief:
+      "Quick wants to keep the Giant burger iconic and appeal to younger generations while strengthening its cult status.",
+    insight:
+      "The Masked Singer is one of Belgium’s most-watched TV shows, attracting over a million viewers — a perfect stage for Belgian icons.",
+    idea:
+      "Create a Giant-themed costume on The Masked Singer, hiding Jean-Marie Pfaff — Belgium’s famous former football goalkeeper. Cryptic clues across episodes turn every reveal into brand theatre.",
+    impact:
+      "A media-native idea that borrows TV suspense for burger cult status — entertainment as advertising without a classic ad break.",
   },
   {
     slug: "missing-kidt",
     title: "The Missing Kid(t)",
     client: "Child Focus",
     year: "2025",
-    disciplines: ["Social impact", "Idea", "Craft"],
+    disciplines: ["Social impact", "Idea", "Sports"],
     blurb:
-      "A concept built to stick — turning attention into action for missing children.",
+      "Football jerseys carry missing children’s names — shirt numbers show how many days they’ve been gone.",
     image: "/work/missing-kidt.webp",
-    caseUrl: "https://jarobrichau.be/work/themissingkidt.html",
+    role: "Concept",
+    brief:
+      "Child Focus aims to raise awareness about long-term missing children in Belgium and push people to share missing-person reports.",
+    insight:
+      "Every day children go missing, but society underestimates the scale. Football is where Belgium already pays attention.",
+    idea:
+      "Players wear jerseys with missing children’s first names. Shirt numbers show how many days each child has been missing — keeping the issue visible and urgent.",
+    impact:
+      "A platform idea that turns match day into a national reminder — attention that can travel from stadium to feed to tip.",
   },
   {
     slug: "naperol",
     title: "Naperol",
     client: "Aperol Spritz",
     year: "2025",
-    disciplines: ["Activation", "Brand", "Social"],
-    blurb: "Aperol energy, louder. A bright, shareable hit for the Spritz crowd.",
+    disciplines: ["Activation", "Brand", "Festival"],
+    blurb:
+      "Festival days are long — so Aperol becomes the excuse for a stylish recharge. Meet Naperol.",
     image: "/work/naperol.webp",
-    caseUrl: "https://jarobrichau.be/work/naperol.html",
+    role: "Concept & activation idea",
+    brief:
+      "Make Aperol more visible at festivals by linking it to social experiences, music and bars.",
+    insight:
+      "Festival days are loooooong. People need a moment to recharge before the night hits.",
+    idea:
+      "The Naperol Spritz zone — a citrus-scented outdoor lounge with big orange cushions where visitors rest and refresh.",
+    impact:
+      "Brand presence that people feel with their body, not only see on a screen — rest as the product demo.",
   },
   {
     slug: "aging-murals",
@@ -49,19 +78,48 @@ export const projects: Project[] = [
     year: "2025",
     disciplines: ["OOH", "Concept", "Impact"],
     blurb:
-      "Murals that age with the issue — public space as a slow, unavoidable reminder.",
+      "Murals of missing children age each year — placed where they were last seen, so the search stays alive.",
     image: "/work/aging-murals.webp",
-    caseUrl: "https://jarobrichau.be/work/agingmurals.html",
+    role: "Concept",
+    brief:
+      "Long-term missing children fade from public awareness over time, making the search even harder.",
+    insight:
+      "People engage more when reminded in a personal, visible and emotional way — in the street, not only in a feed.",
+    idea:
+      "Evolving street murals across Belgium with age-progressed portraits. Artists update them yearly so the kids grow with the city.",
+    impact:
+      "Public space as a living casefile — memory that refuses to stay frozen in time.",
   },
 ];
 
+export const getProject = (slug: string) =>
+  projects.find((p) => p.slug === slug);
+
 export const disciplines = [
-  { label: "Creative concepts", note: "Campaigns & ideas that land" },
-  { label: "Digital marketing", note: "Performance, SEO, SEA, social" },
-  { label: "UX / UI", note: "Research, flows, prototypes" },
-  { label: "Brand & design", note: "Identity, web, experiences" },
-  { label: "Frontend craft", note: "Build what you design" },
-  { label: "AI in the workflow", note: "Faster from brief to ship" },
+  {
+    label: "Creative concepts",
+    note: "Campaign thinking, insights, ideas that stick.",
+  },
+  {
+    label: "Digital marketing",
+    note: "Performance, SEO, SEA, social — at DIDIOM, at the client’s desk.",
+  },
+  {
+    label: "UX / UI",
+    note: "Research, flows, prototypes, interfaces that behave.",
+  },
+  {
+    label: "Brand & design",
+    note: "Identity systems, web, interactive experiences.",
+  },
+  {
+    label: "Frontend craft",
+    note: "I can design it and ship a working slice of it.",
+  },
+  {
+    label: "AI in the workflow",
+    note: "Faster from brief to concept to production.",
+  },
 ];
 
 export const timeline = [
@@ -70,7 +128,7 @@ export const timeline = [
     title: "Digital Marketing Consultant",
     place: "DIDIOM — Antwerp",
     detail:
-      "In-house digital marketing support: strategy, channels and creative execution at the client’s desk.",
+      "In-house digital marketing support: strategy, channels and creative execution with clients on-site.",
   },
   {
     year: "2026",
@@ -102,4 +160,17 @@ export const timeline = [
     place: "Thomas More · bachelor",
     detail: "UX/UI, branding and interactive foundations — plus internship at Strarex.",
   },
+];
+
+export const services = [
+  "Campaign concepts",
+  "Creative direction support",
+  "Digital marketing execution",
+  "SEO / SEA thinking",
+  "Social & content",
+  "UX / UI design",
+  "Prototyping",
+  "Brand systems",
+  "Landing experiences",
+  "AI-assisted production",
 ];
